@@ -1,0 +1,160 @@
+/* ===== style.css ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0f0f12;
+  color: #f2f2f2;
+}
+
+/* ===== STRONA GŁÓWNA ===== */
+.main-title {
+  text-align: center;
+  padding: 60px 20px 20px;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.portfolio-links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px 20px 80px;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  width: 360px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #333;
+}
+
+.portfolio-card:hover img {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+  border-color: #888;
+}
+
+.portfolio-card span {
+  margin-top: 18px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== PODSTRONY ===== */
+.sub-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 100px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Video embed grid (Voice Design) */
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* proporcje 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* PDF embed (General Sound Design) */
+.pdf-wrapper {
+  width: 100%;
+  height: 85vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  background: #1a1a1e;
+}
+
+.pdf-wrapper embed {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pdf-download {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  color: #9dd6ff;
+}
+
+/* Przycisk powrotu */
+.back-button-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #f2f2f2;
+  color: #0f0f12;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .portfolio-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-title {
+    font-size: 2.2rem;
+  }
+}
